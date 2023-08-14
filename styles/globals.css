@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+    font-family: 'Poppins', sans-serif;
+   font-family: 'Rubik', sans-serif;
+}
+
+body{
+    background-color: #000000
+}
+
+#slider::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5em;
+  }
+
+#slider::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }

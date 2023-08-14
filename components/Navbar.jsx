@@ -2,7 +2,7 @@ import React from 'react';
 
 const Navbar = (props) => {
     return (
-        <section className='bg-black w-full h-20 flex items-center justify-between px-2 md:px-7'>
+        <section className='w-full h-20 flex items-center justify-between px-2 md:px-7 absolute z-[100]'>
              <h1 className='text-red-700 font-bold text-xl md:text-3xl'>NETFLIX</h1>
              <div>
                 <button className='text-white pr-3'>Sign In</button>
