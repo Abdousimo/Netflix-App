@@ -24,7 +24,7 @@ const Main = (props) => {
             return str
         }
     }
-    
+    //console.log(movies);
     return (
         <section className='w-full h-[550px] text-white'>
             <div className='w-full h-full'>

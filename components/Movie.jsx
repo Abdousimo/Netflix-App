@@ -1,9 +1,13 @@
+import Link from 'next/link';
 import React,{useState} from 'react';
 import {FaHeart,FaRegHeart} from 'react-icons/fa'
+import {BiMoviePlay} from 'react-icons/bi'
+import { UserAuth } from '@/context/AuthContext';
 
 const Movie = ({item}) => {
    
     const [like, setLike] = useState(false)
+    const {user} =  UserAuth()
 
     return (
         <div className='w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block cursor-pointer relative p-2'>
@@ -13,8 +17,15 @@ const Movie = ({item}) => {
                         {item?.title}
                     </p>
                     <p onClick={()=> setLike(!like)}>
-                           {like ? <FaHeart className='absolute top-4 left-4 text-gray-400'/> : <FaRegHeart className='absolute top-4 left-4 text-gray-400'/>}
+                           {like ? <FaHeart size={25} className='absolute top-4 left-4 text-gray-400'/> : <FaRegHeart size={25} className='absolute top-4 left-4 text-gray-400'/>}
                     </p>
+                    { user?.email ? 
+                        <Link href={`/movies/${item?.id}`}>
+                             <BiMoviePlay size={25} className='absolute top-4 right-4 text-gray-400'/> 
+                         </Link>
+                         : 
+                         null
+                         }
                 </div>                
             </div>
     );
