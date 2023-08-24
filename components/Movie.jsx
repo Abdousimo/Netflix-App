@@ -17,11 +17,11 @@ const Movie = ({item}) => {
                         {item?.title}
                     </p>
                     <p onClick={()=> setLike(!like)}>
-                           {like ? <FaHeart size={25} className='absolute top-4 left-4 text-gray-400'/> : <FaRegHeart size={25} className='absolute top-4 left-4 text-gray-400'/>}
+                           {like ? <FaHeart className='absolute top-4 left-4 text-gray-400'/> : <FaRegHeart className='absolute top-4 left-4 text-gray-400'/>}
                     </p>
                     { user?.email ? 
                         <Link href={`/movies/${item?.id}`}>
-                             <BiMoviePlay size={25} className='absolute top-4 right-4 text-gray-400'/> 
+                             <BiMoviePlay className='absolute top-4 right-4 text-gray-400'/> 
                          </Link>
                          : 
                          null
